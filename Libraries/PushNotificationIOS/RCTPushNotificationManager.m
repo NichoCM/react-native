@@ -265,6 +265,12 @@ RCT_EXPORT_MODULE()
   [self sendEventWithName:@"remoteNotificationRegistrationError" body:errorDetails];
 }
 
+- (void)handleUserNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
+{
+    
+}
+
+
 - (void)handleRegisterUserNotificationSettings:(NSNotification *)notification
 {
   if (_requestPermissionsResolveBlock == nil) {
